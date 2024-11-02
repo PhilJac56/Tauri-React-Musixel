@@ -1,0 +1,10 @@
+Track Title-->Track Title
+Track Artist-->Track Artist
+Month--> Month
+Year-->Year
+Retailer-->Retailer
+Customer Territory -->Customer Territory
+Downloads-->Downloads
+Creations-->Creations
+Stream-->Stream
+Earnings($)-->Earnings
