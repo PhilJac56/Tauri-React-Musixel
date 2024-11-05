@@ -2,9 +2,12 @@
 by PhilJac56 on Github
 
 ## Purpose
+Created in September 2023, this project is intended purely for educational use and is not designed for production.
 This project was developed as a personal exercise to learn the React and Tauri frameworks. It parses Excel files from the music service Routenote.com, which contain statistics on song streaming counts across various platforms. Selected data are parsed and stored in an IndexedDB database based on specific keywords. The statistics are then displayed through tables and charts using Highcharts. 
 
-This repository includes an example Excel file with artificial data in the insights section for demonstration purposes. Created in September 2023, this project is intended purely for educational use and is not designed for production. This is not an official Routenote program; Routenote provides its own online statistics pages with graphs. The purpose of this project is to serve as a guide for developers interested in learning how to parse Excel files, create tables and graphs, and use IndexedDB with React. Tauri then allows the creation of a Windows executable with an integrated Chrome-based navigator and local database.
+This release includes (in src/ExcelExempleFile) a test Excel file formatted to match the monthly streaming statistics file from Routenote.com. The data in this file is fictitious and serves as an example for testing purposes only. It replicates the structure of a genuine Routenote report, allowing developers to test the functionality of the application without accessing real user data. This file can be used to practice parsing and analyzing streaming statistics in the same layout as the official Routenote report.
+
+ This is not an official Routenote program; Routenote provides its own online statistics pages with graphs. The purpose of this project is to serve as a guide for developers interested in learning how to parse Excel files, create tables and graphs, and use IndexedDB with React. Tauri then allows the creation of a Windows executable with an integrated Chrome-based navigator and local database.
 
 ## Possible Project Extensions
 If you need to retrieve data from Excel files for statistical analysis or database creation, this program can serve as a foundation for your development.
@@ -19,7 +22,7 @@ This project is not actively maintained, and pull requests are closed. The code 
 - **Highcharts**: A library for creating interactive charts.
 
 ## Getting Started
-To test the application, an example Excel file is provided in the insights section. This file is formatted similarly to Routenote's real statistics files (not the "summary" monthly version but includes all data).
+To test the application, an example Excel file is provided in src/ExcelExempleFile. This file is formatted similarly to Routenote's real statistics files (not the "summary" monthly version but includes all data).
 
 ## Project Structure
 For better organization, it's common to create a `src/components/` folder for `.jsx` components and a `src/services/` folder for `.js` endpoints and calculations. In this project, however, all files are located in the `src` directory, with English comments added for each function.

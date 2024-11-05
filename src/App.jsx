@@ -212,7 +212,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <p>
-          Musixel by <a href="https://test.com" target="_blank" rel="noopener noreferrer">Philjac56</a> on Github - MIT license - For educational.
+          Musixel by <a href="https://github.com/PhilJac56/Tauri-React-Musixel" target="_blank" rel="noopener noreferrer">Philjac56</a> on Github - MIT license - 
         </p>
       </footer>
     </Router>
