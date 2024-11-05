@@ -1,7 +1,9 @@
 import React from 'react';
 
+// Component to render a table showing total earnings for each track
 const TotalEarningsTable = ({ earningsData }) => {
-    console.log(earningsData);
+  console.log(earningsData); // Log the earnings data for debugging
+
   return (
     <table>
       <thead>
@@ -13,12 +15,13 @@ const TotalEarningsTable = ({ earningsData }) => {
         </tr>
       </thead>
       <tbody>
+        {/* Render each row of earnings data */}
         {earningsData.map((data, index) => (
           <tr key={index}>
-            <td>{index + 1}</td>
-            <td>{data.title}</td>
-            <td>{data.artist}</td>
-            <td>{data.totalEarnings.toFixed(2)}</td>
+            <td>{index + 1}</td> {/* Row number */}
+            <td>{data.title}</td> {/* Track title */}
+            <td>{data.artist}</td> {/* Track artist */}
+            <td>{data.totalEarnings.toFixed(2)}</td> {/* Total earnings, formatted to 2 decimal places */}
           </tr>
         ))}
       </tbody>

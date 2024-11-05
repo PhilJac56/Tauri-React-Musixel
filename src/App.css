@@ -1,7 +1,100 @@
-.logo.vite:hover {
-  filter: drop-shadow(0 0 2em #747bff);
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafb);
+#header {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c0c54;
+  color: #fff;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+#logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 
+    0px 4px 4px rgba(0, 0, 0, 0.2),   /* Base shadow */
+    inset 0px 2px 5px rgba(255, 255, 255, 0.6), /* Inner shadow for depth effect */
+    inset 0px -2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow at the bottom for relief */
+  transition: transform 0.3s ease;
+}
+
+#logo:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 
+    0px 6px 8px rgba(0, 0, 0, 0.3), 
+    inset 0px 3px 6px rgba(255, 255, 255, 0.5), 
+    inset 0px -3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#uploadButton {
+  background-color: #edf6ee;
+  color: rgb(40, 35, 203);
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#uploadButton:hover {
+  background-color: #45a049;
+}
+
+.clear-data-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.clear-data-btn:hover {
+  background-color: #e53935;
+}
+
+.error-message {
+  color: #f44336;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* App.css */
+.footer {
+  background-color: #280858;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  color: #4a90e2; /* Replace #4a90e2 with your preferred color */
+  text-decoration: none;
+  font-weight: bold; /* Optional: to make the link more visible */
+}
+
+.footer a:hover {
+  color: #6aa9ff; /* Hover color, replace if needed */
+  text-decoration: underline;
+}
+

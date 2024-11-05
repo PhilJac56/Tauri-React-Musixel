@@ -1,6 +1,6 @@
 // indexedDB.js
 
-// Fonction pour initialiser la base de données IndexedDB
+// Function to initialize the IndexedDB database
 export const initDB = (callback) => {
   const request = indexedDB.open("MusixelDB", 2);
 
@@ -15,15 +15,15 @@ export const initDB = (callback) => {
   };
 
   request.onerror = (event) => {
-    console.log("Erreur d'ouverture de la base de données", event);
+    console.log("Error opening the database", event);
   };
 
   request.onsuccess = (event) => {
-    console.log("Base de données ouverte avec succès");
+    console.log("Database opened successfully");
   };
 };
 
-// Fonction pour ajouter un enregistrement (track) à l'object store "tracks"
+// Function to add a record (track) to the "tracks" object store
 export const addTrack = (track, updateFunction, setOkMessage) => {
   const request = indexedDB.open("MusixelDB", 2);
   request.onsuccess = (event) => {
@@ -33,8 +33,8 @@ export const addTrack = (track, updateFunction, setOkMessage) => {
     const addRequest = objectStore.add(track);
 
     addRequest.onsuccess = () => {
-      refreshData(updateFunction);  // Rafraîchir les données après l'ajout
-      setOkMessage(`Le fichier a été enregistré avec succès !`);
+      refreshData(updateFunction);  // Refresh data after adding
+      setOkMessage(`The file has been successfully saved!`);
     };
   };
 };
@@ -83,7 +83,7 @@ export const refreshData = async (updateFunction) => {
   }
 };
 
-// Fonction pour ajouter le nom du fichier uploadé
+// Function to add the name of the uploaded file
 export const addUploadedFileName = (fileName) => {
   const request = indexedDB.open("MusixelDB", 2);
   request.onsuccess = (event) => {
@@ -94,9 +94,7 @@ export const addUploadedFileName = (fileName) => {
   };
 };
 
-// Fonction pour supprimer toutes les données des object stores
-// indexedDB.js
-
+// Function to clear all data from the object stores
 export const clearAllData = () => {
   const request = indexedDB.open("MusixelDB", 2);
 
@@ -105,31 +103,31 @@ export const clearAllData = () => {
     const transaction = db.transaction(["tracks", "uploadedFiles"], "readwrite");
 
     transaction.oncomplete = () => {
-      console.log("Toutes les données ont été supprimées.");
+      console.log("All data has been cleared.");
       window.location.reload(); // Refresh the page after clearing data
     };
 
     transaction.onerror = (event) => {
-      console.error("Erreur de transaction :", event.target.error);
+      console.error("Transaction error:", event.target.error);
     };
 
     const tracksStore = transaction.objectStore("tracks");
     tracksStore.clear().onsuccess = () => {
-      console.log("Object store 'tracks' vidé.");
+      console.log("Object store 'tracks' cleared.");
     };
 
     const uploadedFilesStore = transaction.objectStore("uploadedFiles");
     uploadedFilesStore.clear().onsuccess = () => {
-      console.log("Object store 'uploadedFiles' vidé.");
+      console.log("Object store 'uploadedFiles' cleared.");
     };
   };
 
   request.onerror = (event) => {
-    console.error("Erreur lors de l'ouverture de la base de données :", event.target.error);
+    console.error("Error opening the database:", event.target.error);
   };
 };
 
-// Fonction pour vérifier si le fichier a déjà été uploadé
+// Function to check if the file has already been uploaded
 export const checkIfFileExists = async (fileName) => {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open("MusixelDB", 2);
@@ -146,7 +144,7 @@ export const checkIfFileExists = async (fileName) => {
       };
 
       getAllRequest.onerror = () => {
-        reject("Erreur lors de la récupération des noms de fichiers");
+        reject("Error retrieving file names");
       };
     };
   });

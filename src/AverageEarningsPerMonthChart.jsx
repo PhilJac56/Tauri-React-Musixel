@@ -3,10 +3,13 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { calculateAverageEarningsPerMonth } from './StatisticsCalculations';
 
+
+
 const AverageEarningsPerMonthChart = ({ allTracks }) => {
+  // Calculate the average earnings per month from the provided tracks
   const averageEarningsByYearAndMonth = calculateAverageEarningsPerMonth(allTracks);
 
-  // Regrouper les données par année
+  // Group the data by year
   const dataByYear = {};
   for (const [yearMonthKey, average] of Object.entries(averageEarningsByYearAndMonth)) {
     const [year, month] = yearMonthKey.split('-');

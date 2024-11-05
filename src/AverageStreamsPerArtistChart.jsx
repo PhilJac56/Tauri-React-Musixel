@@ -4,10 +4,10 @@ import HighchartsReact from 'highcharts-react-official';
 import { calculateAverageStreamsPerArtist } from './StatisticsCalculations';
 
 const AverageStreamsPerArtistChart = ({ allTracks }) => {
-  // Calculer la moyenne des streams par artiste
+  // Calculate the average streams per artist
   const averageStreamsPerArtist = calculateAverageStreamsPerArtist(allTracks);
 
-  // Options pour Highcharts
+  // Highcharts options
   const options = {
     chart: {
       type: 'column',

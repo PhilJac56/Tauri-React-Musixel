@@ -7,10 +7,10 @@ import { calculateDownloadsDistributionByTerritory } from './StatisticsCalculati
 
 
 const DownloadsDistributionByTerritoryChart = ({ allTracks }) => {
-  // Calculer la distribution des téléchargements par territoire
+  // Calculate the downloads distribution by territory
   const downloadsDistribution = calculateDownloadsDistributionByTerritory(allTracks);
 
-  // Options pour Highcharts
+  // Highcharts options
   const options = {
     chart: {
       type: 'boxplot',

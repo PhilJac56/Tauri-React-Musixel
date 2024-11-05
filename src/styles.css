@@ -1,99 +1,75 @@
-/* Ajoutez ces lignes dans votre fichier styles.css */
-#uploadButton {
-  background-color: orange; /* Couleur de fond orange */
-  border: none;
-  color: white;
-  padding: 20px 40px; /* Bouton plus grand */
-  text-align: center;
-  font-size: 18px; /* Texte plus grand */
-  cursor: pointer;
-  border-radius: 12px; /* Coins arrondis pour un effet "bouton" */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  margin-left: 20px;
-}
-
-#uploadButton:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-#uploadButton:active {
-  background-color: #ff8c00; /* Couleur de fond lorsqu'il est actif */
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#header {
-  background-color: rgb(95, 67, 107);
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-
-#logo {
-  height: 150px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
+/* styles.css */
 
 #container {
   display: flex;
-  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 
 #left-menu {
   width: 200px;
-  background-color: rgb(95, 67, 107);
-  color: white;
-  padding: 20px;
-  height: 100%; /* Prend toute la hauteur du conteneur */
-}
-
-#main-content {
-  flex-grow: 1;
-  background-color: white;
-  padding: 20px;
+  padding: 15px;
+  background-color: #280858;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
 }
 
 #left-menu a {
-  color: white;
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
   text-decoration: none;
+  color: #ece6e6;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 #left-menu a:hover {
-  text-decoration: underline;
+  background-color: #4a90e2;
+  color: white;
 }
+
+#main-content {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 18px;
-  text-align: left;
+  margin-top: 20px;
 }
 
-th, td {
-  padding: 10px;
+table th, table td {
+  padding: 12px;
+  text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
-th {
-  background-color: #f2f2f2;
+table th {
+  background-color: #4a90e2;
+  color: white;
 }
 
-tr:hover {
-  background-color: #f5f5f5;
-}
-.error-message {
-  color: red;
+table tr:hover {
+  background-color: #f1f1f1;
 }
 
-.success-message {
-  color: green;
-  font-weight: bold;
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chart-container {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
