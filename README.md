@@ -1,6 +1,24 @@
 # Tauri-React-Musixel - Excel Stats parser and Analyzer
 by PhilJac56 on Github
 
+## Table of Contents
+- [Purpose](#purpose)
+- [Possible Project Extensions](#possible-project-extensions)
+- [Collaborations](#collaborations)
+- [Key Features](#key-features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Features](#features)
+- [Dependencies](#dependencies)
+  - [Production Dependencies](#production-dependencies)
+  - [Development Dependencies](#development-dependencies)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Application in Development](#running-the-application-in-development)
+- [Building the Tauri Executable for Windows](#building-the-tauri-executable-for-windows)
+- [Disclaimer](#disclaimer)
+- [License](#license)
+
 ## Purpose
 Created in September 2023, this project is intended purely for educational use and is not designed for production.
 This project was developed as a personal exercise to learn the React and Tauri frameworks. It parses Excel files from the music service Routenote.com, which contain statistics on song streaming counts across various platforms. Selected data are parsed and stored in an IndexedDB database based on specific keywords. The statistics are then displayed through tables and charts using Highcharts. 
