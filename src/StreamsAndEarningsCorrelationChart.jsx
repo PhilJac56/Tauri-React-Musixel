@@ -16,7 +16,7 @@ const StreamsAndEarningsCorrelationChart = ({ allTracks }) => {
       zoomType: 'xy'
     },
     title: {
-      text: 'Corrélation entre les streams et les gains'
+      text: 'Streams and earnings correlations'
     },
     xAxis: {
       title: {
