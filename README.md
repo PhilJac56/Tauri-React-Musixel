@@ -1,6 +1,8 @@
 # Tauri-React-Musixel - Excel Stats parser and Analyzer
 by [PhilJac56](https://github.com/PhilJac56) on Github
 
+[text](https://www.buymeacoffee.com/philjac)
+
  [Youtube quick Demo](https://youtu.be/aeCa7xKWMuo)
 
 ## Table of Contents
