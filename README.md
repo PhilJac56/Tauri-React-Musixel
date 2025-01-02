@@ -94,7 +94,7 @@ Before you begin, ensure you have the following installed on your machine:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/Tauri-React-Musixel.git
+    git clone https://github.com/PhilJac56/Tauri-React-Musixel.git
     cd Tauri-React-Musixel
     ```
 
